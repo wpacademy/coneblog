@@ -1,0 +1,136 @@
+/*
+* Posts Slider CSS
+*/
+.mr-1 {
+    margin-right: 1em;
+}
+.coneblog-ticker-container {
+    position: relative;
+}
+.coneblog-news-ticker {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.coneblog-news-ticker .ticekr-label, .coneblog-news-ticker .coneblog-ticker {
+    height: 100%;
+}
+.coneblog-news-ticker .ticekr-label {
+    width: 150px;
+    float: left;
+    height: 100%;
+    background-color: #f6ce2b;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase
+}
+.coneblog-news-ticker .coneblog-ticker {
+    width: calc(100% - 150px);
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+.coneblog-news-ticker.no-label .coneblog-ticker {
+    width: 100%;
+}
+.coneblog-ticker .item {
+    position: relative;
+}
+.coneblog-ticker .item > span {
+    display: inline-block;
+}
+.coneblog-ticker .item .news-meta {
+    line-height: 1.2;
+}
+.coneblog-ticker .item .news-meta > span {
+    font-size: 10px;
+    margin-right: 10px;
+    
+}
+.coneblog-ticker .item .news-meta > span, .coneblog-ticker .item .news-meta > span a {
+    color: #222222;
+}
+.coneblog-ticker .item .news-meta > span i {
+    margin-right: 5px;
+}
+.coneblog-ticker .item .news-title.no-meta {
+    height: 50px;
+}
+.coneblog-ticker .item .news-title h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    font-family: "Roboto", serif;
+}
+.coneblog-ticker .item .news-title h3 a {
+    color: #222222;
+}
+.coneblog-ticker .item .news-title.no-meta h3 {
+    display: block;
+    height: 100%;
+    line-height: 50px !important;
+}
+.coneblog-ticker .owl-nav {
+    display: block;
+    width: 94px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding-right: 5px;
+    background-color: #f0f0f0;
+}
+.coneblog-ticker .owl-prev, .coneblog-ticker .owl-next {
+    width: 46%;
+    height: 80%;
+    text-align: center;
+    color: #ffffff !important;
+    font-size: 20px !important;
+    position: relative;
+    top: 10%;
+    background: #000000 !important;
+    display: inline-block;
+    border-radius: 0;
+    transition: 0.5s all;
+    outline: none !important;
+    margin: 0 2%;
+}
+.coneblog-ticker .owl-prev:hover, .coneblog-ticker .owl-next:hover {
+    background: #f6ce2b !important;
+    color: #000000 !important;
+}
+@media all and (max-width: 768px) {
+    .coneblog-ticker .owl-nav {
+        display: block;
+        width: 30px;
+        height: 100%;
+    }
+    .coneblog-ticker .owl-nav .owl-next, .coneblog-ticker .owl-nav .owl-prev {
+        font-size: 10px !important;
+        width: 100%;
+        height: 40%;
+        top: 0 !important;
+        border: none !important;
+        line-height: 10px !important;
+    }
+    .coneblog-ticker .owl-nav .owl-next {
+        top: -5px !important;
+    }
+    .coneblog-news-ticker .ticekr-label {
+        display: none;
+    }
+    .coneblog-news-ticker .coneblog-ticker {
+        width: 100%;
+        overflow: hidden;
+        padding-right: 30px;
+    }
+    .coneblog-ticker .item .news-title h3 {
+        line-height: 30px;
+    }
+}

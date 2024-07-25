@@ -1,0 +1,27 @@
+/*
+* Generic CSS for Elementor Widgets
+*/
+.coneblog-widget-head {
+    margin-bottom: 20px;
+}
+.coneblog-widget-head.style-1 {
+    border-bottom: 2px solid #f6ce2b;
+}
+.coneblog-widget-head.style-2 {
+    border-left: 3px solid #f6ce2b;
+}
+.coneblog-widget-head h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #222222;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.coneblog-widget-head.style-1 h3 {
+    background-color: #f6ce2b;
+}
+.coneblog-widget-head.style-2 h3 {
+    background-color: transparent;
+}

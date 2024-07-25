@@ -1,0 +1,185 @@
+/*
+* Posts Carousel CSS
+*/
+.coneblog-posts-carousel-container p {
+    font-family: "Roboto", serif;
+}
+.coneblog-posts-carousel-container a, .coneblog-posts-carousel-container a:visited {
+    color: #333333;
+    transition: 0.5s all;
+}
+.coneblog-posts-carousel-container a:hover, .coneblog-posts-carousel-container a:active, .coneblog-posts-carousel-container a:visited:hover {
+    color: #f6ce2b;
+}
+.mr-1 {
+    margin-right: 1em;
+}
+
+.coneblog-posts-carousel-container {
+    position: relative;
+}
+.coneblog-carousel .item {
+    height: 480px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.coneblog-posts-carousel.layout-2 .item {
+    height: auto;
+}
+.coneblog-carousel .item .item-thumb {
+    position: relative;
+}
+.coneblog-carousel .item .overlay, .coneblog-carousel .item .grid-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+}
+.coneblog-carousel .item .grid-link {
+    background-color: transparent;
+    z-index: 20;
+}
+.coneblog-posts-carousel.layout-1 .coneblog-carousel .item .item-meta {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    z-index: 30;
+    transition: 0.5s all;
+    width: 100%;
+}
+.coneblog-carousel .item .item-meta.meta-overlay {
+    background-color: rgba(0,0,0,0.6);
+}
+.coneblog-posts-carousel.layout-1 .coneblog-carousel .item .item-meta h3, .coneblog-posts-carousel.layout-2 .coneblog-carousel .item .item-meta h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.coneblog-posts-carousel.layout-1 .coneblog-carousel .item .item-meta h3 a {
+    color: #ffffff;
+    text-shadow: 0px 0px 3px #000000;
+}
+.coneblog-posts-carousel.layout-2 .coneblog-carousel .item .item-meta h3 {
+    margin-top: 10px;
+}
+.coneblog-posts-carousel.layout-2 .coneblog-carousel .item .item-meta h3 a {
+    color: #333333;
+}
+.coneblog-posts-carousel.layout-1 .coneblog-carousel .item .extra-meta {
+    display: none;
+}
+.coneblog-posts-carousel.layout-2 .coneblog-carousel .item .extra-meta-small {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+.coneblog-carousel .item .extra-meta .meta-info, .coneblog-carousel .item .extra-meta .meta-info .post-meta.post-comments i, .coneblog-carousel .item .extra-meta .post-desc, .coneblog-carousel .item .extra-meta-small .meta-info, .coneblog-carousel .item .extra-meta-small .meta-info .post-meta.post-comments i {
+    font-size: 12px;
+    color: #cccccc;
+}
+.coneblog-carousel .item .extra-meta .meta-info a, .coneblog-carousel .item .extra-meta .meta-info .post-meta.post-comments a {
+    color: #999999;
+}
+.coneblog-posts-carousel.layout-2 .coneblog-carousel .item .extra-meta .meta-info a, .coneblog-posts-carousel.layout-2 .coneblog-carousel .item .extra-meta .meta-info .post-meta.post-comments a, .coneblog-posts-carousel.layout-2 .item .extra-meta .post-desc {
+    color: #555555;
+}
+.coneblog-posts-carousel.layout-2 .coneblog-carousel .item .extra-meta-small .meta-info, .coneblog-posts-carousel.layout-2 .coneblog-carousel .item .extra-meta-small .meta-info a, .coneblog-posts-carousel.layout-2 .coneblog-carousel .item .extra-meta-small .meta-info .post-meta.post-comments a, .coneblog-posts-carousel.layout-2 .coneblog-carousel .item .extra-meta-small .meta-info .post-meta.post-comments i {
+    color: #f0f0f0;
+}
+.coneblog-posts-carousel.layout-2 .coneblog-carousel .item .extra-meta-small .meta-info > span {
+    margin: 0 5px
+}
+.coneblog-carousel .item .extra-meta .post-desc {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.coneblog-carousel .item:hover .extra-meta {
+    display: block;
+}
+.coneblog-carousel .item .grid-post-term {
+    display: block;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+.coneblog-carousel .item .grid-post-term span {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: #f6ce2b;
+	height: 100%;
+	display: inline-block;
+}
+.coneblog-carousel .item .grid-post-term span.term-icon {
+	background-color: #000000;
+	color: #ffffff;
+	position: relative;
+	font-size: 10px;
+}
+.coneblog-carousel .item .grid-post-term span.term-name {
+	color: #000000;
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+    line-height: 1;
+}
+.coneblog-carousel .owl-nav {
+    display: none;
+}
+.coneblog-carousel:hover .owl-nav {
+    display: block;
+}
+.coneblog-carousel .owl-dots {
+    text-align: center;
+}
+.coneblog-carousel .owl-dots .owl-dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #cccccc;
+    margin: 0 5px;
+    border-radius: 50%;
+    outline: none !important;
+    transition: 0.5s all;
+}
+.coneblog-carousel .owl-dots .owl-dot:hover, .coneblog-carousel .owl-dots .owl-dot.active {
+    background-color: #f6ce2b;
+}
+.coneblog-carousel .owl-prev, .coneblog-carousel .owl-next {
+    width: 50px !important;
+    height: 50px !important;
+    text-align: center !important;
+    color: #ffffff !important;
+    line-height: 50px !important;
+    font-size: 30px !important;
+    position: absolute !important;
+    top: 50%;
+    margin-top: -50px;
+    background: #000000 !important;
+    display: inline-block;
+    border-radius: 5px !important;
+    transition: 0.5s all !important;
+    outline: none !important;
+}
+.coneblog-carousel .owl-prev:hover, .coneblog-carousel .owl-next:hover {
+    background: #f6ce2b !important;
+    color: #000000 !important;
+}
+.coneblog-posts-carousel.layout-2 .coneblog-carousel .owl-prev, .coneblog-posts-carousel.layout-2 .coneblog-carousel .owl-next {
+    top: 10px !important;
+    margin-top: 0;
+}
+.coneblog-carousel .owl-prev {
+    left: 10px !important;
+}
+.coneblog-carousel .owl-next {
+    right: 10px !important;
+}
+@media all and (max-width: 768px) {
+    .coneblog-carousel .owl-nav {
+        display: block;
+    }
+}

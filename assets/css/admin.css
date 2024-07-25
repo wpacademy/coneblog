@@ -1,0 +1,444 @@
+/*
+* Admin Settings Panel CSS
+* @author ConeBlog
+* @since 1.1.0
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Roboto:wght@400;500;700&display=swap');
+
+/**
+* Utilities
+*/
+.mt-10 {margin-top: 10px !important}
+.mb-10 {margin-bottom: 10px !important}
+.mr-10 {margin-right: 10px !important}
+.ml-10 {margin-left: 10px !important}
+/**
+* Main Wrapper
+*/
+.coneblog-admin-wrap {
+    width: calc(100% + 20px);
+    background-color: #ffffff;
+    overflow: hidden;
+    min-height: 600px;
+    margin-top: 0px;
+    margin-left: -20px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 0px;
+}
+.coneblog-admin-wrap a {
+    transition: 0.5s all;
+}
+.coneblog-admin-wrap h1, .coneblog-admin-wrap h2, .coneblog-admin-wrap h3, .coneblog-admin-wrap h4{
+    font-family: 'Poppins', sans-serif;
+}
+
+/**
+* Panel Content
+*/
+.coneblog-panel-head, .coneblog-panel-content {
+    width: 100%;
+    overflow: hidden;
+}
+.coneblog-panel-head {
+    border-radius: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 85px;
+    display: flex;
+}
+.coneblog-panel-content {
+    background-color: #ffffff;
+}
+.coneblog-panel-head .side-panel-col {
+    padding: 15px;
+}
+.coneblog-panel-head .panel-logo {
+    display: flex;
+    align-items: center;
+}
+.coneblog-panel-head .panel-logo .cb-logo-title {
+    margin-left: 10px;
+    font-size: 28px;
+    color: #000000;
+    font-weight: bold;
+}
+.coneblog-panel-head .panel-logo img {
+    max-width: 60px;
+}
+.coneblog-panel-head .side-panel-col:last-child {
+    background-color: #000000;
+    flex: 5;
+}
+.coneblog-panel-head .side-panel-col:first-child {
+    background-color: #f6ce2b;
+    flex: 1;
+}
+ul.coneblog-panel-tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.coneblog-panel-tabs li {
+    display: inline-block;
+    margin: 0 15px 0 0;
+}
+ul.coneblog-panel-tabs li a {
+    display: block;
+    padding: 20px;
+    color: #f9f9f9;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: transparent;
+}
+ul.coneblog-panel-tabs li a:hover, ul.coneblog-panel-tabs li a.active {
+    background-color: #f6ce2b;
+    color: #000000;
+}
+ul.coneblog-panel-tabs li a > i {
+    margin-right: 10px;
+}
+.coneblog-panel-content form {
+    padding: 25px;
+}
+.coneblog-panel-content .panel-section-heading {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+.coneblog-panel-content .panel-section-subheading {
+    color: #666666;
+    line-height: 1.2;
+}
+.cb-builder-notice {
+    padding: 15px 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #444444;
+    border: 2px solid #f6ce2b;
+    display: none;
+}
+.page-coneblog .cb-builder-notice {
+    display: block;
+}
+.coneblog-panel-content form #submit {
+    padding: 10px 25px;
+    background-color: #f6ce2b;
+    border: none;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif !important;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+.coneblog-panel-content form p.submit {
+    text-align: right;
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+.coneblog-panel-content form #submit:hover {
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+}
+.coneblog-panel-content.page-cb-support form p.submit {
+    display: none;
+}
+/* The Form Fields */
+.form-fields-row {
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.form-field-row {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    clear: both;
+    margin-top: 20px;
+}
+.form-field-row.sub-row {
+    padding: 0px;
+}
+.form-field-row.hidden, .sub-section-row.hidden {
+    display: none;
+}
+.form-field-row.sub-row .sub-section {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    clear: both;
+    height: auto;
+    overflow: hidden;
+    padding: 15px;
+    border: 2px solid #f0f0f0;
+}
+.form-field-row.sub-row .sub-section .sub-section-col {
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+.form-field-row.sub-row .sub-section .sub-section-col span, .form-field-row.sub-row .sub-section .sub-section-col select {
+    display: inline-block;
+    line-height: 1;
+}
+.form-field-row.sub-row .sub-section .sub-section-col > span {
+    font-size: 28px;
+}
+.form-field-row.sub-row .sub-section .sub-section-col > span i {
+    position: relative;
+    top: 8px;
+}
+.form-field-row.sub-row .sub-section h4 {
+    margin-top: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+    color: #555555;
+}
+.switch-field-box {
+    padding: 20px;
+    border: 2px solid #ededed;
+    border-radius: 10px;
+    margin: 10px 5px;
+}
+.switch-box-icon {
+    margin-bottom: 10px;
+}
+.switch-box-title {
+    width: 100%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.page-cb-tools .switch-box-title {
+    font-size: 22px;
+}
+.switch-box-icon, .switch-box-control {
+    width: 100%;
+    text-align: center;
+}
+.switch-box-icon img {
+    width: 100%;
+    max-width: 150px;
+}
+.form-fields-row.widgets-row .switch-field-box .switch-box-icon img {
+    width: auto;
+    max-width: 100px;
+}
+.switch-box-md {
+    width: 50%;
+    max-width: 635px;
+    float: left;
+    height: 50px;
+}
+.switch-box-inline {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.switch-box-md .switch-box-title, .switch-box-md .switch-box-control {
+    float: left;
+    height: 100%;
+    line-height: 50px;
+}
+.switch-box-md .switch-box-title {
+    width: 70%;
+    text-align: left;
+}
+.switch-box-md .switch-box-control {
+    width: 30%;
+    text-align: right;
+}
+.switch-box-inline > span {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+.switch-box-inline .switch-box-title {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #f6ce2b;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #f6ce2b;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Support Boxes */
+.cb-supoort-boxes-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    column-gap: 25px;
+    margin-top: 50px;
+}
+.cb-support-box {
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #ededed;
+    background-color: #ffffff;
+    transition: .2s all;
+    text-align: center;
+}
+.cb-support-box:hover {
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+    border: 3px solid #ffffff;
+}
+.cb-support-box-text {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Roboto", serif;
+}
+.cb-support-box-link a {
+    display: block;
+    padding: 15px 10px;
+    background-color: #f0f0f0;
+    color: #333333;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: .5s all;
+}
+.cb-support-box-link a:hover {
+    background-color: #000000;
+    color: #f6ce2b;
+}
+@media only screen and (max-width: 1130px) {
+    .coneblog-panel-head {
+        display: block;
+        height: auto;
+        overflow: hidden;
+    }
+    .coneblog-panel-head .side-panel-col:first-child, .coneblog-panel-head .side-panel-col:last-child {
+        padding-bottom: 15px;
+    }
+    .coneblog-panel-head .side-panel-col , .coneblog-panel-content {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        height: auto;
+        overflow: hidden;
+    }
+    .form-fields-row {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .coneblog-admin-wrap {
+        padding: 10px;
+        max-width: 100%;
+    }
+    .coneblog-panel-head .side-panel-col:first-child, .coneblog-panel-head .side-panel-col:last-child {
+        padding-bottom: 5px;
+    }
+    ul.coneblog-panel-tabs li {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+    .switch-field-box, .form-fields-row.widgets-row .switch-field-box {
+        width: 80%;
+    }
+    .cb-supoort-boxes-container {
+        grid-template-columns: 100%;
+    }
+    .form-fields-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cb-support-box {
+        margin-bottom: 15px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .switch-box-inline {
+        width: 100%;
+        padding: 10px;
+    }
+    .switch-box-inline > span {
+        margin: 0;
+    }
+    .switch-box-inline .switch-box-title {
+        margin-right: 10px;
+    }
+    .form-field-row.sub-row .sub-section .sub-section-col {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+}

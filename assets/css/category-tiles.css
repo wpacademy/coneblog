@@ -1,0 +1,194 @@
+/*
+* Category Tiles CSS
+*/
+.coneblog-category-tiles-container p {
+    font-family: "Roboto", serif;
+}
+.coneblog-category-tiles-container a, .coneblog-category-tiles-container a:visited {
+    color: #333333;
+    transition: 0.5s all;
+}
+.coneblog-category-tiles-container a:hover, .coneblog-category-tiles-container a:active, .coneblog-category-tiles-container a:visited:hover {
+    color: #f6ce2b;
+}
+.mr-1 {
+    margin-right: 1em;
+}
+.coneblog-category-tiles-container {
+    min-height: 250px;
+}
+.coneblog-category-tiles-container.layout-3 {
+    min-height: 50px;
+}
+.coneblog-category-tiles {
+    display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+	grid-gap: 10px;
+	height: auto;
+}
+.coneblog-category-tiles.layout-1 {
+    min-height: 400px;
+	background-color: transparent;
+}
+.coneblog-category-tiles.layout-2 {
+    min-height: 200px;
+	background-color: transparent;
+}
+.coneblog-category-tile {
+    border-radius: 5px;
+    background-color: #f6ce2b;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 250px;
+}
+.tile-content {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    padding: 20px 25px;
+    width: 100%;
+    z-index: 10;
+    word-wrap: break-word;
+}
+.tile-overlay, .coneblog-link-overlay {
+    border-radius: 5px;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+}
+.coneblog-link-overlay {
+    display: block;
+    z-index: 20;
+    cursor: pointer;
+}
+.coneblog-post-count {
+    top: 15px;
+    left: 15px;
+    position: absolute;
+    z-index: 10;
+    width: calc(100% - 25px);
+}
+.coneblog-post-count span {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.7);
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.coneblog-tile-icon {
+    font-size: 48px;
+    display: inline-block;
+    width: 100%;
+}
+.coneblog-category-tile-link {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+.coneblog-category-box {
+    height: 100%;
+    position: relative;
+    min-width: 250px;
+    padding-bottom: 60px;
+}
+.coneblog-category-box .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+.coneblog-category-box .icon-container {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    margin-bottom: -60px;
+}
+.coneblog-box-icon {
+    color: #333333;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 5px solid rgba(0,0,0,0.7);
+    text-align: center;
+    line-height: 100px;
+    font-size: 40px;
+}
+.coneblog-box-icon > i {
+    position: relative;
+    top: -3px;
+}
+.coneblog-box-post-count {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.7);
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 20;
+    border-radius: 5px;
+}
+.coneblog-category-box .category-name {
+    padding: 10px;
+    text-align: center;
+}
+.coneblog-category-list {
+    display: flex;
+    align-items: center;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+}
+.coneblog-category-list .icon-container {
+    flex-basis: 70px;
+    text-align: center;
+    margin-right: 15px;
+}
+.coneblog-category-list .coneblog-catlist-icon {
+    font-size: 32px;
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+}
+.coneblog-category-list .category-name {
+    margin-bottom: 0;
+    line-height: 1;
+    margin-top: 0;
+}
+.coneblog-catlist-post-count {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666666;
+    line-height: 1.2;
+}
+@media all and (max-width: 768px) {
+    .coneblog-category-tile {
+        min-height: 150px;
+    }
+    .coneblog-category-tiles.layout-2 {
+        grid-template-columns: auto;
+        grid-template-rows: 200px;
+        row-gap: 50px;
+    }
+    .coneblog-category-tiles.layout-2 .coneblog-category-box {
+        min-height: 200px;
+    }
+}

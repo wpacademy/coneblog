@@ -1,0 +1,101 @@
+/*
+* Posts List CSS
+*/
+.coneblog-posts-list-container p {
+    font-family: "Roboto", serif;
+}
+.coneblog-posts-list-container a, a:visited {
+    color: #333333;
+    transition: 0.5s all;
+}
+.coneblog-posts-list-container a:hover, .coneblog-posts-list-container a:active, .coneblog-posts-list-container a:visited:hover {
+    color: #f6ce2b;
+}
+.coneblog-posts-list-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.coneblog-posts-list {
+    width: 100%;
+    position: relative;
+}
+.coneblog-posts-list.layout-1 .list-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.coneblog-posts-list.layout-1 .item-thumb {
+    margin-right: 10px;
+    position: relative;
+}
+.coneblog-posts-list.layout-1 .item-meta {
+    padding: 5px;
+}
+.coneblog-posts-list.layout-2 .list-item {
+    display: block;
+    margin-bottom: 15px;
+}
+.coneblog-posts-list.layout-2 .item-thumb {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+.coneblog-posts-list .item-meta .post-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.coneblog-posts-list .item-meta .post-title a {
+    color: #333333;
+}
+.coneblog-posts-list .item-meta .post-desc {
+    font-size: 12px;
+    color: #555555;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.list-meta-info {
+    margin-top: 10px;
+}
+.list-meta-info, .list-meta-info .post-meta.post-comments i, .list-meta-info a {
+    font-size: 11px;
+    color: #999999;
+}
+.list-meta-info > span {
+	margin-right: 10px;
+}
+.coneblog-posts-list .list-item .grid-post-term {
+    display: block;
+    position: absolute;
+    left: 5px;
+    bottom: 10px;
+}
+.coneblog-posts-list .list-item .grid-post-term span {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: #f6ce2b;
+	height: 100%;
+	display: inline-block;
+}
+.coneblog-posts-list .list-item .grid-post-term span.term-icon {
+	background-color: #000000;
+	color: #ffffff;
+	position: relative;
+	font-size: 10px;
+}
+.coneblog-posts-list .list-item .grid-post-term span.term-name {
+	color: #000000;
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+    line-height: 1;
+}
+@media all and (max-width: 768px) {
+    .coneblog-posts-list .list-item .grid-post-term {
+        width: calc(100% - 10px);
+    }
+    .coneblog-posts-list .list-item .grid-post-term span.term-name {
+        font-size: 8px;
+    }
+}

@@ -34,6 +34,6 @@ You can create amazing blog layouts by using supported page builder with any the
 ## Requirements
 You Must Install and Activate Supported Page Builder (ie: Elementor) before installing this plugin.
 
-## How to get helP
+## How to get help
 
 You can post in plugin forums [Forums]( https://wordpress.org/support/plugin/coneblog-widgets/ "ConeBlog Plugin Help Forum")

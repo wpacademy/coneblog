@@ -1,3 +1,5 @@
+![banner-772x250](https://github.com/user-attachments/assets/d4155c70-6358-425e-82d2-6d2f6194907a)
+
 [ConeBlog Widgets](https://wordpress.org/plugins/coneblog-widgets/ "Blog Widgets for WordPress") is a collection of beautiful blog widgets for Elementor and WordPress. Highly customizable elements for Elementor page builder. 
 You can help us improve the plugin by providing your valuable feedback in our [Facbook Community](https://www.facebook.com/groups/wpcone "WPCone Community")
 
@@ -37,3 +39,6 @@ You Must Install and Activate Supported Page Builder (ie: Elementor) before inst
 ## How to get help
 
 You can post in plugin forums [Forums]( https://wordpress.org/support/plugin/coneblog-widgets/ "ConeBlog Plugin Help Forum")
+
+
+![screenshot-8](https://github.com/user-attachments/assets/b153f563-5db9-448b-9117-e45999b469d4)

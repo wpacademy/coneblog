@@ -1,4 +1,4 @@
-[ConeBlog Widgets](https://wpcone.com/plugins/coneblog-widgets/ "Blog Widgets for WordPress") is a collection of beautiful blog widgets for Elementor and WordPress. Highly customizable elements for Elementor page builder. 
+[ConeBlog Widgets](https://wordpress.org/plugins/coneblog-widgets/ "Blog Widgets for WordPress") is a collection of beautiful blog widgets for Elementor and WordPress. Highly customizable elements for Elementor page builder. 
 You can help us improve the plugin by providing your valuable feedback in our [Facbook Community](https://www.facebook.com/groups/wpcone "WPCone Community")
 
 You can create amazing blog layouts by using supported page builder with any theme of your choice. All the widgets are highly customizable with pre-designed layouts. Just drag and drop the widgets and play with the settings and make cool layouts.

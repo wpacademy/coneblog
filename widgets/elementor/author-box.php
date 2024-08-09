@@ -12,8 +12,8 @@ namespace ConeBlogWidgets\Widgets;
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
-use Elementor\Core\Schemes\Typography;
-use Elementor\Core\Schemes\Color;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
 use ConeBlogWidgets\Classes\Helper;
 
 // Security Note: Blocks direct access to the plugin PHP files.
@@ -492,7 +492,9 @@ class coneblog_Author_Box extends Widget_Base {
             [
                 'name' => 'coneblog_authorbox_name',
                 'label' => __('Author Name', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
                 'selector' => '{{WRAPPER}} .cb-author-name h3',
 				'fields_options' => [
 					'typography' => ['default' => 'yes'],
@@ -508,7 +510,9 @@ class coneblog_Author_Box extends Widget_Base {
             [
                 'name' => 'coneblog_authorbox_name_2',
                 'label' => __('Author Name', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
                 'selector' => '{{WRAPPER}} .cb-author-name h3',
 				'fields_options' => [
 					'typography' => ['default' => 'yes'],
@@ -536,7 +540,9 @@ class coneblog_Author_Box extends Widget_Base {
             [
                 'name' => 'coneblog_authorbox_title',
                 'label' => __('Author Title', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_3,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				],
                 'selectors' => [
 					'{{WRAPPER}} .cb-author-title',
 					'{{WRAPPER}} .cb-author-title a',
@@ -577,7 +583,9 @@ class coneblog_Author_Box extends Widget_Base {
             [
                 'name' => 'coneblog_authorbox_bio',
                 'label' => __('Author Bio', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_3,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				],
                 'selector' => '{{WRAPPER}} .cb-author-bio p',
 				'fields_options' => [
 					'typography' => ['default' => 'yes'],
@@ -641,9 +649,8 @@ class coneblog_Author_Box extends Widget_Base {
 			[
 				'label' => __( 'Hover Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .coneblog-author-box:hover .cb-avatar img' => 'border-color: {{VALUE}}',
@@ -729,9 +736,8 @@ class coneblog_Author_Box extends Widget_Base {
 			[
 				'label' => __( 'Icon Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cb-social-links ul li a' => 'color: {{VALUE}}',
@@ -744,9 +750,8 @@ class coneblog_Author_Box extends Widget_Base {
 			[
 				'label' => __( 'Icon Hover Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cb-social-links ul li a:hover' => 'color: {{VALUE}}',
@@ -819,9 +824,8 @@ class coneblog_Author_Box extends Widget_Base {
 			[
 				'label' => __( 'Text Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cb-author-posts a' => 'color: {{VALUE}}',
@@ -834,9 +838,8 @@ class coneblog_Author_Box extends Widget_Base {
 			[
 				'label' => __( 'Background Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cb-author-posts a' => 'background-color: {{VALUE}}',
@@ -849,9 +852,8 @@ class coneblog_Author_Box extends Widget_Base {
 			[
 				'label' => __( 'Hover Text Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cb-author-posts a:hover' => 'color: {{VALUE}}',
@@ -864,9 +866,8 @@ class coneblog_Author_Box extends Widget_Base {
 			[
 				'label' => __( 'Hover Background Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cb-author-posts a:hover' => 'background-color: {{VALUE}}',

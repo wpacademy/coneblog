@@ -12,8 +12,8 @@ namespace ConeBlogWidgets\Widgets;
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
-use Elementor\Core\Schemes\Typography;
-use Elementor\Core\Schemes\Color;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
 use ConeBlogWidgets\Classes\Helper;
 
 // Security Note: Blocks direct access to the plugin PHP files.
@@ -650,7 +650,9 @@ class coneblog_Carousel_Posts extends Widget_Base {
             [
                 'name' => 'coneblog_widget_heading_typography',
                 'label' => __('Widget Head Typography', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
                 'selector' =>
 					'{{WRAPPER}} .coneblog-widget-head h3',
             ]
@@ -766,7 +768,9 @@ class coneblog_Carousel_Posts extends Widget_Base {
             [
                 'name' => 'coneblog_post_list_title_typography',
                 'label' => __('Post Title', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
                 'selector' =>
 					'{{WRAPPER}} .coneblog-posts-carousel .coneblog-carousel .item h3',
             ]
@@ -799,7 +803,9 @@ class coneblog_Carousel_Posts extends Widget_Base {
             [
                 'name' => 'coneblog_post_list_title_typography_2',
                 'label' => __('Post Excerpt', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_2,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_SECONDARY,
+				],
                 'selector' => '{{WRAPPER}} .coneblog-posts-carousel .coneblog-carousel .item .post-desc',
             ]
         );
@@ -828,9 +834,8 @@ class coneblog_Carousel_Posts extends Widget_Base {
 			[
 				'label' => __( 'Term Name Background', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .grid-post-term span.term-name' => 'background-color: {{VALUE}}',
@@ -843,9 +848,8 @@ class coneblog_Carousel_Posts extends Widget_Base {
 			[
 				'label' => __( 'Term Name Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .grid-post-term span.term-name' => 'color: {{VALUE}}',
@@ -858,7 +862,9 @@ class coneblog_Carousel_Posts extends Widget_Base {
             [
                 'name' => 'coneblog_post_term_typography',
                 'label' => __('Typography', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
                 'selector' =>
 					'{{WRAPPER}} .grid-post-term span.term-name',
             ]
@@ -918,9 +924,8 @@ class coneblog_Carousel_Posts extends Widget_Base {
 			[
 				'label' => __( 'Icon Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
                     '{{WRAPPER}} .coneblog-carousel .owl-prev' => 'color: {{VALUE}} !important',
@@ -934,9 +939,8 @@ class coneblog_Carousel_Posts extends Widget_Base {
 			[
 				'label' => __( 'Background Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
                     '{{WRAPPER}} .coneblog-carousel .owl-prev' => 'background: {{VALUE}} !important',
@@ -959,9 +963,8 @@ class coneblog_Carousel_Posts extends Widget_Base {
 			[
 				'label' => __( 'Icon Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
                     '{{WRAPPER}} .coneblog-carousel .owl-prev:hover' => 'color: {{VALUE}} !important',
@@ -975,9 +978,8 @@ class coneblog_Carousel_Posts extends Widget_Base {
 			[
 				'label' => __( 'Background Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
                     '{{WRAPPER}} .coneblog-carousel .owl-prev:hover' => 'background: {{VALUE}} !important',
@@ -1039,9 +1041,8 @@ class coneblog_Carousel_Posts extends Widget_Base {
 			[
 				'label' => __( 'Dot Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
                     '{{WRAPPER}} .coneblog-carousel .owl-dot' => 'background-color: {{VALUE}}',
@@ -1054,9 +1055,8 @@ class coneblog_Carousel_Posts extends Widget_Base {
 			[
 				'label' => __( 'Dot Active/Hover', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
                     '{{WRAPPER}} .coneblog-carousel .owl-dot:hover' => 'background-color: {{VALUE}}',

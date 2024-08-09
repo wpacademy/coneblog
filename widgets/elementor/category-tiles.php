@@ -12,8 +12,7 @@ namespace ConeBlogWidgets\Widgets;
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
-use Elementor\Core\Schemes\Typography;
-use Elementor\Core\Schemes\Color;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use ConeBlogWidgets\Classes\Helper;
 
 // Security Note: Blocks direct access to the plugin PHP files.
@@ -441,7 +440,9 @@ class coneblog_Category_Tiles extends Widget_Base {
             [
                 'name' => 'coneblog_tile_title_typography',
                 'label' => __('Category Name', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],	
                 'selector' =>
 					'{{WRAPPER}} .coneblog-category-tile-link',
             ]

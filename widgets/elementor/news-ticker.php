@@ -12,8 +12,8 @@ namespace ConeBlogWidgets\Widgets;
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
-use Elementor\Core\Schemes\Typography;
-use Elementor\Core\Schemes\Color;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
 use ConeBlogWidgets\Classes\Helper;
 
 // Security Note: Blocks direct access to the plugin PHP files.
@@ -389,7 +389,9 @@ class coneblog_News_Ticker extends Widget_Base {
             [
                 'name' => 'coneblog_news_ticker_title_typography',
                 'label' => __('News Title', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
                 'selector' =>
 					'{{WRAPPER}} .coneblog-ticker .item .news-title h3',
             ]
@@ -424,7 +426,9 @@ class coneblog_News_Ticker extends Widget_Base {
             [
                 'name' => 'coneblog_news_ticker_meta_typography',
                 'label' => __('News Meta', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_2,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_SECONDARY,
+				],
                 'selector' => '{{WRAPPER}} .coneblog-ticker .item .news-meta > span',
             ]
         );
@@ -458,9 +462,8 @@ class coneblog_News_Ticker extends Widget_Base {
 			[
 				'label' => __( 'Label Background', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .coneblog-news-ticker .ticekr-label' => 'background-color: {{VALUE}}',
@@ -473,9 +476,8 @@ class coneblog_News_Ticker extends Widget_Base {
 			[
 				'label' => __( 'Label Text', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .coneblog-news-ticker .ticekr-label' => 'color: {{VALUE}}',
@@ -488,9 +490,8 @@ class coneblog_News_Ticker extends Widget_Base {
 			[
 				'label' => __( 'Ticker Body Background', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .coneblog-news-ticker .coneblog-ticker' => 'background-color: {{VALUE}}',
@@ -535,9 +536,8 @@ class coneblog_News_Ticker extends Widget_Base {
 			[
 				'label' => __( 'Icon Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
                     '{{WRAPPER}} .coneblog-ticker .owl-prev' => 'color: {{VALUE}} !important',
@@ -551,9 +551,8 @@ class coneblog_News_Ticker extends Widget_Base {
 			[
 				'label' => __( 'Background Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
                     '{{WRAPPER}} .coneblog-ticker .owl-prev' => 'background: {{VALUE}} !important',
@@ -576,9 +575,8 @@ class coneblog_News_Ticker extends Widget_Base {
 			[
 				'label' => __( 'Icon Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
                     '{{WRAPPER}} .coneblog-ticker .owl-prev:hover' => 'color: {{VALUE}} !important',
@@ -592,9 +590,8 @@ class coneblog_News_Ticker extends Widget_Base {
 			[
 				'label' => __( 'Background Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
                     '{{WRAPPER}} .coneblog-ticker .owl-prev:hover' => 'background: {{VALUE}} !important',

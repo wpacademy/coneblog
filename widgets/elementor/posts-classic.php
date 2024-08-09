@@ -12,8 +12,8 @@ namespace ConeBlogWidgets\Widgets;
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
-use Elementor\Core\Schemes\Typography;
-use Elementor\Core\Schemes\Color;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
 use ConeBlogWidgets\Classes\Helper;
 
 // Security Note: Blocks direct access to the plugin PHP files.
@@ -412,7 +412,9 @@ class coneblog_Classic_Posts extends Widget_Base {
             [
                 'name' => 'coneblog_widget_heading_typography',
                 'label' => __('Widget Head Typography', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
                 'selector' =>
 					'{{WRAPPER}} .coneblog-widget-head h3',
             ]
@@ -442,7 +444,9 @@ class coneblog_Classic_Posts extends Widget_Base {
             [
                 'name' => 'coneblog_post_list_widget_head_typography',
                 'label' => __('Typography', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
                 'selector' =>
 					'{{WRAPPER}} .coneblog-widget-head h3',
             ]
@@ -526,7 +530,9 @@ class coneblog_Classic_Posts extends Widget_Base {
             [
                 'name' => 'coneblog_post_list_title_large_typography',
                 'label' => __('Post Title (Large Grid)', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
                 'selector' =>
 					'{{WRAPPER}} .coneblog-posts-classic .item-1 .item-meta .post-title',
             ]
@@ -536,7 +542,9 @@ class coneblog_Classic_Posts extends Widget_Base {
             [
                 'name' => 'coneblog_post_list_title_typography',
                 'label' => __('Post Title (Small Grids)', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
                 'selector' =>
 					'{{WRAPPER}} .coneblog-posts-classic .item-meta .post-title',
             ]
@@ -546,7 +554,9 @@ class coneblog_Classic_Posts extends Widget_Base {
             [
                 'name' => 'coneblog_post_list_title_typography_2',
                 'label' => __('Post Excerpt', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_2,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_SECONDARY,
+				],
                 'selector' => '{{WRAPPER}} .coneblog-posts-classic .item-meta .post-desc',
             ]
         );
@@ -575,9 +585,8 @@ class coneblog_Classic_Posts extends Widget_Base {
 			[
 				'label' => __( 'Term Name Background', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .grid-post-term span.term-name' => 'background-color: {{VALUE}}',
@@ -590,9 +599,8 @@ class coneblog_Classic_Posts extends Widget_Base {
 			[
 				'label' => __( 'Term Name Color', 'coneblog-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
+				'global' => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .grid-post-term span.term-name' => 'color: {{VALUE}}',
@@ -605,7 +613,9 @@ class coneblog_Classic_Posts extends Widget_Base {
             [
                 'name' => 'coneblog_post_term_typography',
                 'label' => __('Typography', 'coneblog-widgets'),
-                'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
                 'selector' =>
 					'{{WRAPPER}} .grid-post-term span.term-name',
             ]

@@ -100,8 +100,9 @@ class Widgets {
 	 *
 	 * @since 1.0.0
 	 * @access public
+	 * @param \Elementor\Widgets_Manager $widgets_manager Elementor widgets manager.
 	 */
-	public function register_widgets() {
+	public function register_widgets( $widgets_manager ) {
 
 		// It's now safe to include Widgets files.
 		$this->include_widgets_files();
@@ -118,28 +119,28 @@ class Widgets {
 
 		// Load active widgets
 		if($this->widget_grid == "on") {
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\STBFeaturedGrid() );
+			$widgets_manager->register( new Widgets\STBFeaturedGrid() );
 		}
 		if($this->widget_list == "on") {
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\coneblog_Posts_List() );
+			$widgets_manager->register( new Widgets\coneblog_Posts_List() );
 		}
 		if($this->widget_classic == "on") {
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\coneblog_Classic_Posts() );
+			$widgets_manager->register( new Widgets\coneblog_Classic_Posts() );
 		}
 		if($this->widget_carousel == "on") {
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\coneblog_Carousel_Posts() );
+			$widgets_manager->register( new Widgets\coneblog_Carousel_Posts() );
 		}
 		if($this->widget_categories == "on") {
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\coneblog_Category_Tiles() );
+			$widgets_manager->register( new Widgets\coneblog_Category_Tiles() );
 		}
 		if($this->widget_slider == "on") {
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\coneblog_Slider_Posts() );
+			$widgets_manager->register( new Widgets\coneblog_Slider_Posts() );
 		}
 		if($this->author_box == "on") {
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\coneblog_Author_Box() );
+			$widgets_manager->register( new Widgets\coneblog_Author_Box() );
 		}
 		if($this->news_ticker == "on") {
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\coneblog_News_Ticker() );
+			$widgets_manager->register( new Widgets\coneblog_News_Ticker() );
 		}
 		
 	}
@@ -154,7 +155,7 @@ class Widgets {
 	 */
 	public function __construct() {
 		// Register the widgets.
-		add_action( 'elementor/widgets/widgets_registered', array( $this, 'register_widgets' ) );
+		add_action( 'elementor/widgets/register', array( $this, 'register_widgets' ) );
 		add_action('elementor/elements/categories_registered', array($this, 'register_elementor_categories'));
 	}
 	

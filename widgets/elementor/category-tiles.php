@@ -112,7 +112,7 @@ class coneblog_Category_Tiles extends Widget_Base {
 	 *
 	 * @access protected
 	 */
-	protected function _register_controls() {
+	protected function register_controls() {
 		$post_types = Helper::coneblog_get_post_types();
 		$categories = Helper::coneblog_get_categories();
 		//var_dump($categories);

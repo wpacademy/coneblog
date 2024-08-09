@@ -112,7 +112,7 @@ class STBFeaturedGrid extends Widget_Base {
 	 *
 	 * @access protected
 	 */
-	protected function _register_controls() {
+	protected function register_controls() {
 		$post_types = Helper::coneblog_get_post_types();
 		$taxonomies = get_taxonomies([], 'objects');
 

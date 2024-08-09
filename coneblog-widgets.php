@@ -9,6 +9,9 @@
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: coneblog-widgets
+ * Requires Plugins: elementor
+ * Elementor tested up to: 3.23.0
+ * Elementor Pro tested up to: 3.23.0
  */
 
 if(!defined('CONEBLOG_WIDGETS')) {

@@ -37,7 +37,7 @@ final class CONEBLOG_WIDGETS {
 	 * @since 1.0.0
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.3.0';
+	const VERSION = '1.4.9';
 
 	/**
 	 * Minimum Elementor Version
@@ -45,7 +45,7 @@ final class CONEBLOG_WIDGETS {
 	 * @since 1.0.0
 	 * @var string Minimum Elementor version required to run the plugin.
 	 */
-	const MINIMUM_ELEMENTOR_VERSION = '2.0.0';
+	const MINIMUM_ELEMENTOR_VERSION = '3.10.0';
 
 	/**
 	 * Minimum PHP Version
@@ -53,7 +53,7 @@ final class CONEBLOG_WIDGETS {
 	 * @since 1.0.0
 	 * @var string Minimum PHP version required to run the plugin.
 	 */
-	const MINIMUM_PHP_VERSION = '7.0';
+	const MINIMUM_PHP_VERSION = '7.4';
 
 	/**
 	 * Constructor
